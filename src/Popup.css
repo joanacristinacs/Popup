@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.popup-aberto body {
+  filter: blur(4px);
+}
+
+.popup-aberto .btn-abrir {
+  filter: blur(4px); 
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(22, 64, 92);
+    filter: blur(0px); 
+    transition: filter 0.3s ease-in-out;
+
+    cursor: none; 
+
+}
+
+.popup {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 24px 28px  ; 
+    border-radius: 5px;
+    font-size: 14px;
+    gap: 20px;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    color: rgb(10, 9, 9);
+    background: white;
+    z-index: 2;
+    cursor: none; 
+}
+
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 15px ;
+    gap: 10px; 
+    font-size: 20px;
+    cursor: none;
+  }
+
+
+  .abrir {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+  }
+
+.btn-abrir{
+  background-color:white; 
+  color:  rgb(22, 64, 92); 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: none; 
+  font-size: 16px; 
+  font-weight: bold; 
+  text-align: center; 
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease; 
+}
+  .btn-x {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    font-family: "Albert Sans", sans-serif; 
+    font-weight: 500; 
+    cursor: none;
+    color: black;
+  }
+
+.btn-importar {
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background: rgb(22, 64, 92);
+  font-size: 15px;
+  cursor: none;
+}
+
+.input-date {
+  background: rgb(245, 245, 245);
+  border: 1px solid #ced4da;
+  padding: 10px 1px 10px 8px;
+  outline: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: "Albert Sans", sans-serif; 
+  font-weight: 770; 
+  cursor: none; 
+}
+
+/* -----------------------------------------*/
+.custom-cursor {
+  position: absolute;
+  width: 18px; /* Ajuste o tamanho conforme necessário */
+  height: 18px;
+  background-color: rgba(0, 0, 0, 0.6); /* Cor do ponto desfocado */
+  border-radius: 50%; /* Forma circular */
+  pointer-events: none; /* Faz com que o elemento não interfira nos eventos de clique */
+  filter: blur(3px); /* Efeito de desfoque */
+  z-index: 9999; /* Garante que o cursor esteja acima de outros elementos */
+}
